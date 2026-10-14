@@ -12,15 +12,9 @@ let filmes = [
 
 let bannerIndex = 0;
 
+// Login livre: qualquer coisa (ou até nada) entra
 function login() {
-  const u = document.getElementById("user").value;
-  const p = document.getElementById("pass").value;
-  if(u && p) {
-    sessionStorage.setItem("logado", "true");
-    iniciarApp();
-  } else {
-    alert("Preencha usuário e senha.");
-  }
+  iniciarApp();
 }
 
 function iniciarApp() {
@@ -125,5 +119,3 @@ function fecharPlayer() {
   document.getElementById("player").style.display = "none";
   document.getElementById("videoFrame").src = "";
 }
-
-window.onload = () => { if(sessionStorage.getItem("logado")) iniciarApp(); };
